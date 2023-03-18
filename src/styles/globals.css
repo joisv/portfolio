@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family: "Druk";
+        font-weight: 500;
+        src: url('../../public/fonts/Druk-Wide-Regular.woff2') format('woff2');
+    }
+}
+
+@layer components{
+    .background {
+        background: linear-gradient(63.54deg, #000A2D 53.78%, rgba(0, 40, 78, 0.89) 94.69%);
+        background-repeat: no-repeat;
+    }
+    .font-shadow {
+        text-shadow: -16px 9px 13px rgba(224, 224, 224, 0.1);
+    }
+    
+}
