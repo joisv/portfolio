@@ -2,7 +2,6 @@ import Head from 'next/head'
 import useIsMobile from '@/function/mobile'
 import Link from 'next/link'
 import { motion as m } from 'framer-motion'
-import { contain, item } from '@/function/animation'
 
 export default function Home() {
   const isMobile = useIsMobile()
@@ -27,19 +26,16 @@ export default function Home() {
             <div className="h-[110vh] w-[80vw]">
               <Link href="/about">
                 <div className="door sm:top-20 top-32 sm:h-[200px] h-[135px]">
-                    <div className="door-content text-primary mb-32 shadow-xl cursor-pointer">
-
+                    <div className="door-content text-primary mb-32 cursor-pointer">
                         <div className='overflow-hidden'>
                           <m.h1 initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.75, delay: 0.5 }} className="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-druk font-semibold text-end ">FULLSTACK WEB DEVELOPER</m.h1>
                         </div>
-                        <div className='overflow-hidden '>
-                          <m.h1 initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.75, delay: 0.8 }} className="sm:text-xl text-lg font-druk font-semibold text-end text-slate-500 sm:w-1/2 right-3">Highly skilled at progressive enhancement, design systems & UI Engineering</m.h1>
+                        <div className='overflow-hidden'>
+                          <m.h1 initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.75, delay: 0.8 }} className="sm:text-xl text-lg font-druk font-semibold text-end text-slate-500">Highly skilled at progressive enhancement, design systems & UI Engineering</m.h1>
                         </div>
-
                     </div>
                 </div>
-              </Link>
-                  
+              </Link>   
             </div>
         </div>
       </main>
