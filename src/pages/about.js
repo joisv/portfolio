@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { useState } from "react";
 import Skills from "@/components/skills"
+import { motion as m } from "framer-motion";
 export default function About(){
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
@@ -14,17 +15,19 @@ export default function About(){
                     <div className="absolute px-8 z-20 right-1 -top-6">
                         <h1 className="text-end font-druk text-3xl sm:text-5xl text--500">MagiC<span className="block">aster</span><span className="block">STUDIO</span></h1>
                     </div>
-                    <Image 
-                        src="/img/hero.jpg"
-                        fill
-                        priority
-                        alt="hero"
-                        sizes="100vw"
-                        className={`object-cover skew-y-6 ${
-                            isImageLoaded ? "" : "translate-x-full"
-                          }`}
-                          onLoad={handleImageLoad}
-                    />
+                    <m.div initial={{ x: "100%" }} animate={{ x: 0 }} transition={{ duration: 0.5, ease: "easeIn" }} className="relative h-full">
+                        <Image 
+                            src="/img/hero.jpg"
+                            fill
+                            priority
+                            alt="hero"
+                            sizes="100vw"
+                            className={`object-cover skew-y-6${
+                                isImageLoaded ? "" : "translate-x-full"
+                            }`}
+                            onLoad={handleImageLoad}
+                        />
+                    </m.div>
                 </div>
                 <div className="block md:grid md:grid-cols-2 md:gap-3">
                     <div className="px-8 text-violet-500 mb-10">
